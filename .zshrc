@@ -19,6 +19,7 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias serve="python -m SimpleHTTPServer 8000"
+alias typora="open -a typora"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
