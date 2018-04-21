@@ -38,5 +38,8 @@ brew install tree
 # Install Pet
 brew install knqyf263/pet/pet
 
+# Install npm
+brew install npm
+
 # Remove outdated versions from the cellar.
 brew cleanup
