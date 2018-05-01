@@ -32,6 +32,9 @@ bindsym $mod+Return exec urxvt
 # start chrome
 bindsym $mod+c exec google-chrome-stable
 
+# start cheatsheets
+bindsym $mod+Mod1+c exec --no-startup-id chromium --app=http://cheaters.yet.org
+
 # start sublime text
 bindsym $mod+i exec subl3
 
