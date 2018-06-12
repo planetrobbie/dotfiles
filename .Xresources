@@ -86,6 +86,14 @@ URxvt*saveLines:                  5000
 
 ! other possible settings:
 ! Rxvt.perl-ext-common:            ...,clipboard
+Rxvt.perl-ext-common:            ...,font-size
+URxvt*perl-lib:					/home/sebbraun/.urxvt/ext
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 ! URxvt.keysym.M-C-c:              perl:clipboard:copy
 ! URxvt.keysym.M-v:                perl:clipboard:paste
 ! URxvt.keysym.M-C-v:              perl:clipboard:paste_escaped

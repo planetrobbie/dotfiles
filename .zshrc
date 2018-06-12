@@ -75,3 +75,13 @@ export PATH=$HOME/in/bin:$HOME/in/code/go/bin:$HOME/in/code/google-cloud-sdk/bin
 
 export GOPATH=/Users/sebbraun/in/code/go
 export ENV_SHIORI_DB=$HOME/Google\ Drive\ \(sebbraun\@gmail.com\)/admin/shiori-bookmarks
+
+# Enable nice prompt
+powerline-daemon -q
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Allow accented letters to be typed using ALT + `, ...
+setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+
+# Set Midnight Commander theme to Solarized
+export MC_SKIN=$HOME/.mc/solarized.ini

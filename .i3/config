@@ -36,7 +36,10 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Mod1+c exec --no-startup-id chromium --app=http://cheaters.yet.org
 
 # start sublime text
-bindsym $mod+i exec subl3
+bindsym $mod+i exec subl
+
+# start spotify
+bindsym $mod+Shift+m exec spotify;workspace 4;focus
 
 # move current workspace between monitors
 bindsym $mod+Control+h move workspace to output left
@@ -310,7 +313,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 60 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
