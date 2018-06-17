@@ -85,3 +85,6 @@ setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 
 # Set Midnight Commander theme to Solarized
 export MC_SKIN=$HOME/.mc/solarized.ini
+
+# Editor Used by Ranger
+export VISUAL=subl
