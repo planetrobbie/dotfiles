@@ -88,3 +88,6 @@ export MC_SKIN=$HOME/.mc/solarized.ini
 
 # Editor Used by Ranger
 export VISUAL=subl
+
+# Use my custom Ranger configuration instead of the default one
+export RANGER_LOAD_DEFAULT_RC=false
