@@ -1,4 +1,4 @@
-# Midnight Commander 3.0 extension file
+G# Midnight Commander 3.0 extension file
 # Warning: Structure of this file has changed completely with version 3.0
 #
 # All lines starting with # or empty lines are thrown away.
@@ -107,6 +107,9 @@
 ### Changes ###
 #
 # Reorganization: 2012-03-07 Slava Zanko <slavazanko@gmail.com>
+
+regex/\.cb(r|z)
+	Open=(mcomix %f &)
 
 
 ### GIT Repo ###

@@ -1,4 +1,4 @@
-# i3 config file (v4)
+
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -17,7 +17,7 @@ hide_edge_borders none
 # change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+Shift+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -30,7 +30,14 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # start chrome
-bindsym $mod+c exec google-chrome-stable
+#bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec chromium
+
+# start brave
+bindsym $mod+b exec brave
+
+# start notion
+bindsym $mod+n exec notion-app-enhanced
 
 # start cheatsheets
 bindsym $mod+Mod1+c exec --no-startup-id chromium --app=http://cheaters.yet.org
@@ -40,6 +47,9 @@ bindsym $mod+i exec subl
 
 # start spotify
 bindsym $mod+Shift+m exec spotify;workspace 4;focus
+
+# start spotify
+bindsym $mod+Shift+t exec joplin-desktop
 
 # move current workspace between monitors
 bindsym $mod+Control+h move workspace to output left
@@ -120,7 +130,7 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
+#bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
@@ -173,10 +183,13 @@ set $ws7 "7"
 set $ws8 "8:"
 
 # Assignement
-assign [class="Google-chrome"] $ws1
+assign [class="Chromium"] $ws1
+assign [class="Brave"] $ws1
 assign [class="URxvt"] $ws2
 assign [class="Subl3"] $ws3
 assign [class="Spotify"] $ws4
+assign [class="Joplin"] $ws3
+assign [class="notion-app-enhanced"] $ws3
 
 workspace $ws2 output $PRIMARY
 

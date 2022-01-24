@@ -120,7 +120,7 @@ URxvt.keysym.C-slash:  font-size:show
 ! URxvt*fadeColor:                 color
 ! URxvt*utmpInhibit:               boolean
 ! URxvt*urgentOnBell:              boolean
-! URxvt*visualBell:                boolean
+URxvt*visualBell:  true 
 ! URxvt*mapAlert:                  boolean
 ! URxvt*meta8:                     boolean
 ! URxvt*tripleclickwords:          boolean
