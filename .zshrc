@@ -19,7 +19,6 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias serve="python -m SimpleHTTPServer 8000"
-alias typora="open -a typora"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -29,9 +28,6 @@ alias typora="open -a typora"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -78,7 +74,7 @@ export ENV_SHIORI_DB=$HOME/Google\ Drive\ \(sebbraun\@gmail.com\)/admin/shiori-b
 
 # Enable nice prompt
 powerline-daemon -q
-. /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Allow accented letters to be typed using ALT + `, ...
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys
@@ -102,9 +98,43 @@ alias mx='sudo mount -t vfat /dev/sda1 /mnt/disknx'
 alias mu='sudo mount -t ext2 /dev/sda1 /mnt/usbmetal/'
 alias nut='sudo python /home/sebbraun/in/bin/nut-2.7/nut.py'
 alias nut3='cd /home/sebbraun/in/bin/nut-3.1; python nut_gui.py'
+alias nut-latest='cd /home/sebbraun/in/bin/nut-latest; python3 nut_gui.py'
 alias dbi='sudo /home/sebbraun/in/switch/dbi/dbibackend'
-#alias 4nxci="/home/sebbraun/in/bin/4nxci/4nxci -k /home/sebbraun/in/bin/4nxci/keys.dat 'Super Bomberman R v001.xci'"
-alias 4nxci="/home/sebbraun/in/bin/4nxci/4nxci -k /home/sebbraun/in/bin/4nxci/keys.dat 'bbb-h-aab8a.xci'"
 alias ls='ls -l --block-size=M'
 alias usb='sudo java -jar /home/sebbraun/in/bin/ns-usbloader-3.0.jar'
 alias bb='sudo mount --verbose -t cifs //192.168.1.112/in /mnt/in-bb -o user=planetrobbie,vers=1.0,sec=ntlmv2'
+
+# PS4
+alias ps4='java -jar /home/sebbraun/in/bin/ps4-exploit-host/ps4-remote-pkg-installer-refs.tags.v0.0.7.jar'
+
+#Steamdeck
+alias sl='flatpak run com.valvesoftware.SteamLink'
+alias nsz='/home/sebbraun/in/bin/nsz-4.6.1/nsz.py'
+
+# Syntax autosuggestion & highlighting 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#00ff00,bold'  # Bright green
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=208,bold'  # Bright green
+zstyle ':completion:*' list-colors \
+    'fg=#ffffff:fg=#007fff:fg=#00ff7f:fg=#ff007f'
+
+# Eza
+alias ls='eza --color=always --icons --group-directories-first'
+
+# Yazi - allows to keep dir location when existing with q otherwise use Q
+function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+        yazi "$@" --cwd-file="$tmp"
+        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+                builtin cd -- "$cwd"
+        fi
+        rm -f -- "$tmp"
+} 
+
+#fzf - Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+#zoxide - better cd
+eval "$(zoxide init zsh)"
