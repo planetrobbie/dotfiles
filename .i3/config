@@ -27,7 +27,7 @@ font xft:System San Francisco Display 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec ghostty
 
 # start chrome
 #bindsym $mod+c exec google-chrome-stable
@@ -44,6 +44,9 @@ bindsym $mod+Mod1+c exec --no-startup-id chromium --app=http://cheaters.yet.org
 
 # start sublime text
 bindsym $mod+i exec subl
+
+# start obsidian
+bindsym $mod+o exec obsidian
 
 # start spotify
 bindsym $mod+Shift+m exec spotify;workspace 4;focus
